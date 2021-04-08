@@ -1,0 +1,4 @@
+
+
+LooginPage.navigateToTheTestRoom();
+LoginPage.clickOnAdotionLink();
