@@ -1,4 +1,8 @@
 
+let app = require('./appFunctions');
 
-LooginPage.navigateToTheTestRoom();
-LoginPage.clickOnAdotionLink();
+async function startApp() {
+    app.intiateFuntion();
+}
+
+startApp();
