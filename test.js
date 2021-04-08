@@ -7,6 +7,7 @@ async function startApp() {
     await app.fundooLogin();
     await app.switchLoginToRegisterPage();
     await app.switchLoginToForgotPasswordPage();
+    await app.forgotPassword();
 }
 
 startApp();
