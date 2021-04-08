@@ -120,6 +120,24 @@ class FundooNotes {
             await driver.quit();
         }
     }
+
+    dashboardCreateNote = async () => {
+        let driver = await this.getDriver();
+        try {
+            await driver.get('http://localhost:8081/dashboard');
+            await driver.manage().window().maximize();
+            await driver.findElement(By.id('noteCard')).click();
+            await driver.findElement(By.name("note-title")).sendKeys('iphone');
+            await driver.findElement(By.name("note-description")).sendKeys('got in gift');
+            await (await driver.findElement(By.id("close-card"))).click();
+            await driver.sleep(10000);
+        }
+        catch (error) {
+            console.log("caught error", error);
+        } finally {
+            await driver.quit();
+        }
+    }
 }
 
 module.exports = new FundooNotes();

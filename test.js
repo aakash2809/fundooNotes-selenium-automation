@@ -8,6 +8,7 @@ async function startApp() {
     await app.switchLoginToRegisterPage();
     await app.switchLoginToForgotPasswordPage();
     await app.forgotPassword();
+    await app.dashboardCreateNote();
 }
 
 startApp();
