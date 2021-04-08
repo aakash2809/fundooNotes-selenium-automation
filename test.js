@@ -2,7 +2,8 @@
 let app = require('./appFunctions');
 
 async function startApp() {
-    app.intiateFuntion();
+    await app.fundooRegister();
+    await app.switchRegisterToLoginPage();
 }
 
 startApp();
