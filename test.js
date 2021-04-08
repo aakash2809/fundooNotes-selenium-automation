@@ -5,6 +5,7 @@ async function startApp() {
     await app.fundooRegister();
     await app.switchRegisterToLoginPage();
     await app.fundooLogin();
+    await app.switchLoginToRegisterPage();
 }
 
 startApp();
