@@ -9,6 +9,7 @@ async function startApp() {
     await app.switchLoginToForgotPasswordPage();
     await app.forgotPassword();
     await app.dashboardCreateNote();
+    await app.clickOnsideNavNotes();
 }
 
 startApp();
