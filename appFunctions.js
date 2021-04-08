@@ -83,6 +83,24 @@ class FundooNotes {
             await driver.quit();
         }
     }
+
+    switchLoginToForgotPasswordPage = async () => {
+        let driver = await this.getDriver();
+        try {
+            await driver.get('http://localhost:8081/');
+            await driver.manage().window().maximize();
+            await (await driver.findElement(By.id("move-to-forgotPassword"))).click();
+            await driver.sleep(10000);
+        }
+        catch (error) {
+            console.log("caught error", error);
+            driver.takeScreenshot().then(function (data) {
+                fs.writeFileSync('img.png', data, 'base64');
+            });
+        } finally {
+            await driver.quit();
+        }
+    }
 }
 
 module.exports = new FundooNotes();

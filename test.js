@@ -6,6 +6,7 @@ async function startApp() {
     await app.switchRegisterToLoginPage();
     await app.fundooLogin();
     await app.switchLoginToRegisterPage();
+    await app.switchLoginToForgotPasswordPage();
 }
 
 startApp();
